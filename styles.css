@@ -1,7 +1,91 @@
+@media (max-width: 768px) {
+
+    .first-image{
+        position: absolute;
+        top: 35%;
+        left: 10%;
+    }
+
+    .reason-container{
+        flex-direction: column !important;
+        /* justify-content: space-between !important; */
+    }
+
+    .reason1, .reason2, .reason3{
+        align-self: center !important;
+        width: 70% !important;
+    }
+
+    .why-move{
+        height: 200vh !important;
+    }
+
+    .nav-item{
+        color: transparent;
+    }
+
+    .module-text{
+        top: -35% !important;
+    }
+
+    .module-image{
+        top: 140% !important;
+    }
+
+    .chain-text{
+        top: -20% !important;
+    }
+
+    .chain-image{
+        top: 130% !important;
+    }
+
+    .connect-text{
+        top: -30% !important;
+    }
+
+    .connect-image{
+        top: 130% !important;
+    }
+
+    .future-text{
+        top: -75% !important;
+    }
+
+    .main-content {
+        max-height: 5100px !important;
+        /* Replace [footer-height] with the actual height of your footer */
+        position: relative;
+        overflow: hidden;
+        /* This prevents content from overflowing outside the main container */
+    }
+
+    .end-container{
+        bottom: -220% !important;
+        flex-direction: column !important;
+        justify-content: space-around !important;
+    }
+
+    .reason2{
+        align-self: center !important;
+        width: 70% !important;
+    }
+
+}
+
+.main-content {
+    max-height: 4100px;
+    /* Replace [footer-height] with the actual height of your footer */
+    position: relative;
+    overflow: hidden;
+    /* This prevents content from overflowing outside the main container */
+}
+
 a {
     color: #F5F3EF;
     text-decoration: none;
 }
+
 a:hover {
     color: lightgrey !important;
     /* Darker color on hover */
@@ -72,8 +156,6 @@ video {
     border-top: 1px solid white;
 }
 
-
-
 .video-container {
     position: fixed;
     top: 0;
@@ -85,40 +167,170 @@ video {
     /* To keep the video in the background */
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* This will blend the background with a dark grey (50% opacity black) */
+    z-index: 2;
+}
+
 #background-video {
     position: fixed;
     object-fit: cover;
     width: 100%;
     height: 100%;
+    opacity: 70;
+    background: linear-gradient(to right, rgba(65, 0, 255, 0.4), rgba(255, 0, 232, 0.3));
 }
 
 #set-height {
     display: block;
 }
 
-section {
+.image-container {
+    position: absolute;
     z-index: 1;
+    top: -15%;
+    right: -5%;
+    /* Place the image above the card content */
+    overflow: visible;
+    /* Allow the image to protrude from the card */
+}
+
+.image-container2 {
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    right: 5%;
+    /* Place the image above the card content */
+    overflow: visible;
+    /* Allow the image to protrude from the card */
+}
+
+.img-fluid {
+    transition: transform 0.1s;
+    will-change: transform;
+    width: 400px;
+}
+
+/* .reason-top {
     position: relative;
+    top: 35%;
+    left: 80%;
 }
 
-section:nth-of-type(1) {
-    height: 100vh;
+.reason-bottom-center {
+    position: relative;
+    top: 80%;
+    left: 40%;
 }
 
-section:nth-of-type(2) {
-    height: 100vh;
+.reason-bottom-right {
+    position: relative;
+    top: 90%;
+    right: 40%;
+} */
+
+.reason {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(118, 118, 209, 0.25);
+    /* Semi-transparent dark grey */
+    padding: 1rem;
+    border-radius: 20px;
+    height: fit-content;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    /* animation */
+    transition: transform 0.1s;
+    will-change: transform;
+    width: 25%
+    /* width: 400px; */
 }
 
-section:nth-of-type(3) {
-    height: 100vh;
+.reason:hover {
+    box-shadow: 0 16px 22px rgba(0, 0, 0, 0.15);
+    /* transform: translateY(-6px); */
 }
 
-section:nth-of-type(4) {
-    height: 100vh;
+.reason h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 700;
 }
 
-section:nth-of-type(5) {
-    height: 100vh;
+.reason p {
+    color: rgb(192, 192, 192);
+    font-size: 15px;
+}
+
+.reason ul {
+    padding-left: 10%;
+}
+
+.reason li {
+    margin-bottom: 0px;
+}
+
+.row {
+    display: flex;
+    justify-content: right;
+}
+
+.row:last-child {
+    justify-content: right;
+}
+
+.left {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* margin: -500; */
+}
+
+.text-flicker {
+    -webkit-animation: text-flicker-in-glow 4s linear both !important;
+    animation: text-flicker-in-glow 4s linear both !important;
 }
 
 #fade {
@@ -203,439 +415,314 @@ section:nth-of-type(5) {
     }
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-    width: 90%;
-}
-
-.image-container {
-    position: absolute;
-    z-index: 1;
-    /* Place the image above the card content */
-    overflow: visible;
-    /* Allow the image to protrude from the card */
-}
-
-.image-container img {
-    /* width: 30%; */
-    /* Adjust the size of the image as needed */
-    height: auto;
-    position: relative;
-    top: -40px;
-    /* Adjust the position of the image as needed */
-    right: -250px;
-    /* Adjust the position of the image as needed */
-}
-
-.img-fluid {
-    transition: transform 0.1s;
-    will-change: transform;
-    width: 400px;
-}
-
-.reason-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-  }
-  
-  .reason-top {
-    top: -80px;
-    left: 850px;
-  }
-  
-  .reason-bottom-center {
-    position: absolute;
-    top: 280px;
-    left: 450px;
-    /* transform: translateX(-100%); */
-  }
-  
-  .reason-bottom-right {
-    position: absolute;
-    top: 280px;
-    right: 450px;
-    /* transform: translateX(100%); */
-  }
-
-.reason {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: rgba(118, 118, 209, 0.25);
-    /* Semi-transparent dark grey */
-    padding: 1rem;
-    border-radius: 10px;
-    /* Rounded corners */
-    width: 70%;
-    /* Adjust this value if needed */
-    margin-bottom: 1rem;
-    /* Space between cards */
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-    /* animation */
-    transition: transform 0.1s;
-    will-change: transform;
-    width: 400px;
-}
-
-.reason:hover {
-    box-shadow: 0 16px 22px rgba(0, 0, 0, 0.15);
-    /* transform: translateY(-6px); */
-}
-
-.reason h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: 700;
-}
-
-.reason p {
-    color: rgb(192, 192, 192);
-    font-size: 15px;
-}
-
-.reason ul {
-    padding-left: 100px;
-}
-
-.reason li {
-    margin-bottom: 0px;
-}
-
-.row {
-    display: flex;
-    justify-content: right;
-}
-
-.row:last-child {
-    justify-content: right;
-}
-
-.why-move {
-    display: flex;
-    height: 100vh;
-    position: relative;
-}
-
-.left {
-    position: absolute;
-    left: 10%;
-    top: 20%;
-}
-
-.right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-}
-
-.footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    width: 100%;
-    position: relative;
-    z-index: 1000;
-    bottom: 0;
-    left: 0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    margin: -500;
-}
-
-.text-flicker {
-	-webkit-animation: text-flicker-in-glow 4s linear both;
-	        animation: text-flicker-in-glow 4s linear both;
-}
-/* ----------------------------------------------
- * Generated by Animista on 2023-4-11 0:56:11
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation text-flicker-in-glow
- * ----------------------------------------
- */
- @-webkit-keyframes text-flicker-in-glow {
+@-webkit-keyframes text-flicker-in-glow {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     10% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     10.1% {
-      opacity: 1;
-      text-shadow: none;
+        opacity: 1;
+        text-shadow: none;
     }
+
     10.2% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     20% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     20.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
     }
+
     20.6% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     30% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     30.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     30.5% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     30.6% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     45% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     45.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     50% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     55% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     55.1% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     57% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     57.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
     }
+
     60% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
     }
+
     60.1% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     65% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     65.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     75% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     75.1% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     77% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     77.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     85% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     85.1% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     86% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     86.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     100% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
     }
-  }
-  @keyframes text-flicker-in-glow {
+}
+
+@keyframes text-flicker-in-glow {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     10% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     10.1% {
-      opacity: 1;
-      text-shadow: none;
+        opacity: 1;
+        text-shadow: none;
     }
+
     10.2% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     20% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     20.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
     }
+
     20.6% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     30% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     30.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     30.5% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     30.6% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     45% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     45.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     50% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     55% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
+
     55.1% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     57% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     57.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
     }
+
     60% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
     }
+
     60.1% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     65% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     65.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     75% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     75.1% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     77% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     77.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     85% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     85.1% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     86% {
-      opacity: 0;
-      text-shadow: none;
+        opacity: 0;
+        text-shadow: none;
     }
+
     86.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
     }
+
     100% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
     }
-  }
-  
+}
