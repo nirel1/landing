@@ -39,39 +39,38 @@
 <body>
     <div class="main-content">
         <div class="video-container">
-        <video id="background-video" tabindex="0" autoplay loop muted playsinline onloadedmetadata="setPlaybackRate(this)">
-            <source src="./images/light.mp4" type='video/mp4;'>
-            Your browser does not support the video tag.
-        </video>
-        <div class="overlay"></div>
+            <video id="background-video" tabindex="0" autoplay loop muted playsinline
+                onloadedmetadata="setPlaybackRate(this)">
+                <source src="./images/light.mp4" type='video/mp4;'>
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
         </div>
-        <nav id="nav" class="navbar navbar-expand-lg" style="position: fixed; height: 65px;">
-            <a style="padding-left: 75px;" href="#"><img src=" ./images/icon.png" width="30px"></a>
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link animate__animated animate__slideInRight"
-                    href="https://docs.strobe.space" target="_blank"
-                    style="animation-delay: 0.2s; font-weight: 700;">
-                    <i class="fas fa-book"></i> docs
-                </a>
-                <a class="nav-item nav-link animate__animated animate__slideInRight"
-                    href="https://twitter.com/StrobeLabs" target="_blank"
-                    style="animation-delay: 0.1s; font-weight: 700;padding-left: 35px;">
-                    <i class="fab fa-twitter"></i> twitter
-                </a>
-                <a class="nav-item nav-link animate__animated animate__slideInRight"
-                    style="padding-left: 35px; font-weight: 700;padding-right: 75px;"
-                    href="https://discord.gg/your-company-discord" target="_blank" style="animation-delay: 0.2s;">
-                    <i class="fab fa-discord"></i> discord
-                </a>
-            </div>
+        <nav id="nav" style="position: fixed; height: 8%;">
+            <a style="padding-left: 5%;" href="#"><img src=" ./images/icon.png" width="35px"></a>
+
+            <a class="nav-item nav-link animate__animated animate__slideInRight" href="https://docs.strobe.space"
+                target="_blank" style="animation-delay: 0.1s; font-weight: 700; padding-left: 50%; ">
+                <i class="fas fa-book" style="color:white"></i> docs
+            </a>
+            <a class="nav-item nav-link animate__animated animate__slideInRight" href="https://twitter.com/StrobeLabs"
+                target="_blank" style="animation-delay: 0.2s; font-weight: 700;padding-left: 0px;">
+                <i class="fab fa-twitter" style="color:white"></i> twitter
+            </a>
+            <a class="nav-item nav-link animate__animated animate__slideInRight"
+                style="padding-left: 0px; font-weight: 700; animation-delay: 0.2s;"
+                href="https://discord.gg/your-company-discord" target="_blank" style="animation-delay: 0.2s;">
+                <i class="fab fa-discord" style="color:white"></i> discord
+            </a>
+
         </nav>
         <header style="height: 100vh; position: relative;">
             <!-- <div class="container h-100">
             <div class="row h-80 align-items-center"> -->
             <!-- <div class="col-lg-11" style="padding-top: 200px;" id="fade"> -->
-            <div style="display: flex; flex-direction: row;">
+            <div style="display: flex; flex-direction: row; ">
                 <div style="display:flex; flex-direction:column;">
-                    <h1 style="padding-left: 100px; padding-top: 150px;">
+                    <h1 style="display:flex; flex-direction: row; padding-left: 30%; padding-top: 50%;">
                         <span class="floating" style="animation-delay: 0s;">s</span><span class="floating"
                             style="animation-delay: 0.15s;">t</span><span class="floating"
                             style="animation-delay: 0.3s;">r</span><span class="floating"
@@ -81,19 +80,20 @@
                             style="animation-delay: 0.75s;">e</span>
                     </h1>
 
-                    <p class="text-flicker" style="padding-left: 100px; font-size: 1.25rem;">Secure and scale your chain
+                    <p class="text-flicker" style="padding-left: 30%; font-size: 1.25rem;">Secure and scale your chain
                         with Move.</p>
                 </div>
-                <div style="padding-left: 40px; padding-top: 160px;">
-                    <img src=" ./images/img2.png" alt="Large Image" width="620">
+                <div class="first-image" style="padding-left: 2%; padding-top: 10%;">
+                    <img src=" ./images/img2.png" alt="Large Image"
+                        style="width:80%; max-width:800px; min-width:400px;">
                 </div>
-                <div style="position:absolute; bottom: -240px; left: 0; opacity: 30%" ;>
+                <div style="position:absolute; top: 60%; left: 0; opacity: 30%" ;>
                     <img src="./images/side.png" width="300">
                 </div>
             </div>
 
             <!-- Section links -->
-            <div class="position-absolute" style="bottom: 75px; right: 75px;">
+            <div style="position: absolute; bottom: 0; right: 5%;">
                 <ul style="list-style-type: none; padding: 0;">
                     <li style="margin-bottom: 10px;">
                         <div class="custom-link-container">
@@ -138,15 +138,15 @@
 
 
         <!-- Why Move? Section -->
-        <section id="why-move" class="why-move" style="height: 100vh; position: relative;">
+        <section class="why-move" style="height: 100vh; position: relative;">
             <div class="left">
                 <h2 style="font-weight: 700">01. Why Move?</h2>
                 <p class="mb-3">The best smart contract language and revolutionary VM</p>
                 <a href="#" class="btn btn-primary">Learn more</a>
             </div>
-            <div class="right">
-                <!-- <div class="reason-container"> -->
-                <div class="reason reason-top">
+            <div class="reason-container"
+                style="display: flex; flex-direction: row; justify-content: space-evenly; position: absolute; top: 40%; height: 80%">
+                <div class="reason reason1" style="align-self:flex-end;">
                     <div class="image-container">
                         <img src="images/icon.png" width="100px" />
                     </div>
@@ -161,27 +161,24 @@
                         <li>Bytecode verification</li>
                     </ul>
                 </div>
-                <div class="reason reason-bottom-center">
-                    <div class="col-2">
+                <div class="reason reason2" style="align-self:center;">
+                    <!-- <div class="col-2">
                         <div id="speed-animation" style="width: 250px;"></div>
-                    </div>
+                    </div> -->
                     <div class="image-container">
                         <img src="images/icon.png" width="100px" />
                     </div>
                     <br>
                     <h3>Speed</h3>
-                    <p>Move is designed for high-performance - with parallel execution and direct compilation to
-                        bytecode -
-                        eliminating interpreter overhead for
-                        faster runtime performance.</p>
+                    <p>Move is designed for high-performance and faster processing.</p>
                     <ul>
-                        <li>Parallel execution capability</li>
+                        <li>Parallel execution</li>
                         <li>No interpreter overhead</li>
-                        <li>Direct bytecode compilation</li>
+                        <li>Direct compilation</li>
                     </ul>
                 </div>
-                <div class="reason reason-bottom-right">
-                    <div id="speed-animation" style="width: 250px; z-index: 9999;"></div>
+                <div class="reason reason3" style="align-self:stretch;">
+                    <!-- <div id="speed-animation" style="width: 250px; z-index: 9999;"></div> -->
                     <div class="image-container">
                         <img src="images/icon.png" width="100px" />
                     </div>
@@ -197,18 +194,15 @@
                     </ul>
                 </div>
             </div>
-            <!-- <div style="position:absolute; top: 0px; left: 0; opacity: 30%" ;>
-            <img src="./images/rside.png" width="300">
-        </div> -->
         </section>
 
         <!-- Module Section -->
-        <section id="module" style="height: 110vh; position: relative;">
+        <section style="height: 60vh; position: relative;">
             <div>
-                <div style="position: absolute; top: 200px; left: 300px;">
-                    <img src="./images/cos.png" style="width: 500px" alt="Module Image" class="img-fluid">
+                <div class="module-image" style="position: absolute; top: 50%; left: 20%;">
+                    <img src="./images/cos.png" style="width: 60%;" alt="Module Image" class="img-fluid">
                 </div>
-                <div style="display: flex; flex-direction: column; position: absolute; top: -100px; right: 335px;">
+                <div class="module-text" style="display: flex; flex-direction: column; position: absolute; top: 5%; right: 10%; ">
                     <h2 style="font-weight: 700;">02. Module</h2>
                     <p>The x/MVM module is built for the <br>cosmos-sdk,
                         bringing Move to:
@@ -222,66 +216,61 @@
                     </ul>
                 </div>
             </div>
-            <div style="position:absolute; top: -140px; left: 0; opacity: 30%" ;>
+            <div style="position:absolute; top: 30%; left: 0; opacity: 30%" ;>
                 <img src="./images/side.png" width="300">
             </div>
-            <div style="position:absolute; top: -450px; right: 0; opacity: 30%" ;>
+            <div style="position:absolute; top: -60%; right: 0; opacity: 30%" ;>
                 <img src="./images/rside.png" width="300">
             </div>
 
         </section>
 
         <!-- Chain Section -->
-        <section id="module" style="height: 100vh; position: relative;">
+        <section style="height: 70vh; position: relative;">
             <div>
-                <div style="display: flex; flex-direction: column; position: absolute; top: -440px; left: 335px;">
+                <div class="chain-text" style="display: flex; flex-direction: column; position: absolute; top: 0%; left: 25%;">
                     <h2 style="font-weight: 700;">03. Chain</h2>
                     <p>The Strobe Chain routes transactions<br>
                         so that Move applications can interact <br>
                         with one another and exchange value.</p>
                 </div>
-                <div style="padding-left: 180px;">
-                    <img src="./images/img3.png" alt="Chain Image" class="img-fluid" style="width: 1200px;"
-                        style="position: absolute; right: 0;">
+                <div class="chain-image" style="padding-left: 10%; padding-right: 5%; top: 90%; position: absolute;"">
+                    <img src=" ./images/img3.png" alt="Chain Image" class="img-fluid" style="width: 100%;">
                 </div>
             </div>
-            <div style="position:absolute; top: 40px; left: 0; opacity: 30%" ;>
+            <!-- <div style="position:absolute; top: 40px; left: 0; opacity: 30%" ;>
                 <img src="./images/side.png" width="300">
-            </div>
-            <div style="position:absolute; top: -250px; right: 0; opacity: 30%" ;>
+            </div> -->
+            <div style="position:absolute; top: 50%; right: 0; opacity: 30%" ;>
                 <img src="./images/rside.png" width="300">
             </div>
         </section>
 
         <!-- Connect Section -->
-        <section id="connect" style="height: 100vh; position: relative;">
+        <section id="connect" style="height: 80vh; position: relative;">
             <div>
-                <div
-                    style="display: flex; flex-direction: column; position: absolute; top: -600px; left: 350px; width: 310px;">
+                <div class="connect-text"
+                    style="display: flex; flex-direction: column; position: absolute; top: 0%; left: 20%; width: 310px;">
                     <h2 style="font-weight: 700;">04. Connecting Move Ecosystems</h2>
                     <p>Strobe brings native contract composability. In this example, Econia’s orderbook can deploy on
                         every
                         connected chain.
                     </p>
                 </div>
-                <div style="padding-left: 300px;">
-                    <img src="./images/fut.png" alt="Future Image" class="img-fluid" style="width: 1200px;"
-                        style="padding-left: 400px; position: absolute; top: 0;">
+                <div class="connect-image" style="padding-left: 10%; position: absolute; top: 110%">
+                    <img src="./images/fut.png" alt="Future Image" class="img-fluid" style="width: 100%; z-index: -1;">
                 </div>
             </div>
-            <div style="position:absolute; top: 280px; left: 0; opacity: 30%" ;>
+            <div style="position:absolute; top: 20%; left: 0; opacity: 30%" ;>
                 <img src="./images/side.png" width="300">
-            </div>
-            <div style="position:absolute; top: -150px; right: 0; opacity: 30%" ;>
-                <img src="./images/rside.png" width="300">
             </div>
         </section>
 
         <!-- Future Section -->
-        <section id="future" style="height: 100vh; position: relative;">
-            <div>
-                <div
-                    style="display: flex; flex-direction: column; position: absolute; top: -800px; left: 335px; width: 770px;">
+        <section id="future" style="height: 50vh; position: relative;">
+            <div class="future-text"
+                style="display: flex; flex-direction: row; position: absolute; justify-content: center; top: 10%; left: 20%; width: 60%">
+                <div style="display: flex; flex-direction: column; position: absolute;">
                     <h2 style="font-weight: 700; " class="text-flicker">05. Future</h2>
                     <p>What does the future hold for Move? With an ever-evolving smart contract ecosystem, Move is
                         poised to
@@ -289,63 +278,77 @@
                         adopt Move, the possibilities for innovation are endless.</p>
                 </div>
             </div>
+            <div style="position:absolute; top: 0%; right: 0; opacity: 30%" ;>
+                <img src="./images/rside.png" width="300">
+            </div>
         </section>
 
-        <!-- <section id="future" style="height: 100vh; position: relative;">
-        <div>
-            <div
-                style="display: flex; flex-direction: row; position: absolute; top: -1200px; left: 335px; width: 1000px;">
-                <div style="display: flex; flex-direction: column; position: absolute; width:400px;">
-                    <h2 style="font-weight: 700";>Partner</h3>
-                        <p>Partner with us and explore the potential of Move, the smart contract language that's
-                            transforming
-                            the blockchain landscape. Discover new possibilities and take advantage of the advanced
-                            features
-                            Move has to offer.</p>
-                        <a href="#" class="btn btn-primary">Partner with us</a>
-                </div>
-                <div style="display: flex; flex-direction: column; position: absolute; padding-left: 400px; width:400px;">
-                    <h2 style="font-weight: 700" ;>Partner</h3>
-                        <p>Partner with us and explore the potential of Move, the smart contract language that's
-                            transforming
-                            the blockchain landscape. Discover new possibilities and take advantage of the advanced
-                            features
-                            Move has to offer.</p>
-                        <a href="#" class="btn btn-primary">Partner with us</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- </div> -->
-
-    <!-- End Section -->
-    <section>
-        <div style="top: -1250px; display: flex; flex-direction: row; position: relative;justify-content: space-evenly; text-align: center;">
-            <div style="display: flex; flex-direction: column; position: relative; width: 420px;">
-                <i class="material-icons" style="font-size: 48px; color: #007BFF;">group</i>
-                <h2 style="font-weight: 700; ">Partner</h3>
+        <!-- End Section -->
+        <section style="height: 50vh; position: relative;">
+            <div class="end-container"
+                style="bottom: -170%; display: flex; flex-direction: row; position: absolute; justify-content: space-evenly; text-align: left;">
+                <div class="reason reason2" style="align-self:flex-end; width:30%; height:30%;">
+                    <div class="image-container2">
+                        <i class="material-icons" style="font-size: 55px; color: #007BFF;">group</i>
+                        <!-- <img src="images/icon.png" width="100px" /> -->
+                    </div>
+                    <br>
+                    <h3>Partner</h3>
                     <p>Partner with us and explore the potential of Move, the smart contract language that's
                         transforming
-                        the blockchain landscape. Discover new possibilities and take advantage of the advanced features
+                        the blockchain landscape. Discover new possibilities and take advantage of the advanced
+                        features
                         Move has to offer.</p>
-                    <a href="mailto:partner@strobe.space" class="btn btn-primary" style="width: 200px; align-self: center;">Partner with us</a>
-            </div>
-            <div style="display: flex; flex-direction: column; position: relative; width:400px;">
-                <i class="material-icons" style="font-size: 48px; color: #28a745;">playlist_add_check</i>
-                <h2 style="font-weight: 700" ;>Join Waitlist</h3>
-                    <p>Be among the first to experience Move's revolutionary capabilities. Join our waitlist today and
+                    <a href="mailto:partner@strobe.space" class="btn btn-primary"
+                        style="width: 200px; align-self: center;">Partner with us</a>
+                </div>
+                <div class="reason reason2" style="align-self:flex-end; width: 30%; height:30%;">
+                    <div class="image-container2">
+                        <i class="material-icons" style="font-size: 55px; color: #28a745;">playlist_add_check</i>
+                        <!-- <img src="images/icon.png" width="100px" /> -->
+                    </div>
+                    <br>
+                    <h3>Join Waitlist</h3>
+                    <p>Be among the first to experience Move's revolutionary capabilities. Join our waitlist today
+                        and
                         stay
                         ahead of the curve as we reshape the future of smart contracts and blockchain technology.</p>
-                    <a href="mailto:waitlist@strobe.space" class="btn btn-primary" style="width: 200px; align-self: center;">Join Waitlist</a>
-            </div>
-        </div>
-    </section>
+                        <a href="mailto:waitlist@strobe.space" class="btn btn-primary"
+                            style="width: 200px; align-self: center;">Join Waitlist</a>
+                </div>
 
-    <!-- Footer -->
-    <footer class="footer" style="top:-1200px;">
-        <div style="margin:0 auto; font-size:14px; color: lightgrey">Strobe All rights Reserved 2023</div>
-        <!-- <div class="footer-nav">
+                <!-- <div style="display: flex; flex-direction: column; position: relative; width: 420px;">
+                    <i class="material-icons" style="font-size: 48px; color: #007BFF;">group</i>
+                    <h2 style="font-weight: 700; ">Partner</h3>
+                        <p>Partner with us and explore the potential of Move, the smart contract language that's
+                            transforming
+                            the blockchain landscape. Discover new possibilities and take advantage of the advanced
+                            features
+                            Move has to offer.</p>
+                        <a href="mailto:partner@strobe.space" class="btn btn-primary"
+                            style="width: 200px; align-self: center;">Partner with us</a>
+                </div>
+                <div style="display: flex; flex-direction: column; position: relative; width:400px;">
+                    <i class="material-icons" style="font-size: 48px; color: #28a745;">playlist_add_check</i>
+                    <h2 style="font-weight: 700" ;>Join Waitlist</h3>
+                        <p>Be among the first to experience Move's revolutionary capabilities. Join our waitlist today
+                            and
+                            stay
+                            ahead of the curve as we reshape the future of smart contracts and blockchain technology.
+                        </p>
+                        <a href="mailto:waitlist@strobe.space" class="btn btn-primary"
+                            style="width: 200px; align-self: center;">Join Waitlist</a>
+                </div>
+            </div> -->
+                <div style="position:absolute; top: 30%; left: 0; opacity: 30%" ;>
+                    <img src="./images/side.png" width="300">
+                </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" style="position: relative;">
+            <div style="margin:0 auto; font-size:14px; color: lightgrey">Strobe All rights Reserved 2023</div>
+            <!-- <div class="footer-nav">
             <a href="https://your-documentation-link.com" target="_blank">
                 <i class="fas fa-book"></i>
             </a>
@@ -356,7 +359,7 @@
                 <i class="fab fa-discord"></i>
             </a>
         </div> -->
-    </footer>
+        </footer>
     </div>
 
     <div id="set-height"></div>
@@ -424,9 +427,9 @@
     </script> -->
     <script>
         function setPlaybackRate(video) {
-          video.playbackRate = 0.25; // Set the playback speed to 50% of the original speed
+            video.playbackRate = 0.25; // Set the playback speed to 50% of the original speed
         }
-      </script>
+    </script>
     <script>
         window.addEventListener("scroll", function () {
             var navbar = document.getElementById("nav");
