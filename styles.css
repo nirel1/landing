@@ -1,54 +1,83 @@
+.first-image {
+    display: grid;
+    min-height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 @media (max-width: 768px) {
 
-    .first-image{
-        position: absolute;
-        top: 35%;
-        left: 10%;
+    .strobe-main {
+        align-items: center;
+        justify-content: center;
     }
 
-    .reason-container{
+    .strobe-main2 {
+        align-items: center;
+        justify-content: center;
+        padding-left: 15% !important; 
+        padding-top: 50% !important;
+    }
+
+    .first-image {
+        display: none;
+    }
+
+    .reason-container {
         flex-direction: column !important;
         /* justify-content: space-between !important; */
     }
 
-    .reason1, .reason2, .reason3{
+    .reason1,
+    .reason2,
+    .reason3 {
         align-self: center !important;
         width: 70% !important;
     }
 
-    .why-move{
+    .why-move {
         height: 200vh !important;
     }
 
-    .nav-item{
+    .nav-item {
         color: transparent;
     }
 
-    .module-text{
+    #nav2 {
+        padding-left: 3% !important;
+    }
+
+    #nav3 {
+        padding-left: 0% !important;
+    }
+
+    .module-text {
         top: -35% !important;
     }
 
-    .module-image{
+    .module-image {
         top: 140% !important;
     }
 
-    .chain-text{
+    .chain-text {
         top: -20% !important;
     }
 
-    .chain-image{
+    .chain-image {
         top: 130% !important;
     }
 
-    .connect-text{
+    .connect-text {
         top: -30% !important;
     }
 
-    .connect-image{
+    .connect-image {
         top: 130% !important;
     }
 
-    .future-text{
+    .future-text {
         top: -75% !important;
     }
 
@@ -60,13 +89,13 @@
         /* This prevents content from overflowing outside the main container */
     }
 
-    .end-container{
+    .end-container {
         bottom: -220% !important;
         flex-direction: column !important;
         justify-content: space-around !important;
     }
 
-    .reason2{
+    .reason2 {
         align-self: center !important;
         width: 70% !important;
     }
@@ -257,7 +286,7 @@ video {
     transition: transform 0.1s;
     will-change: transform;
     width: 25%
-    /* width: 400px; */
+        /* width: 400px; */
 }
 
 .reason:hover {
